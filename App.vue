@@ -64,7 +64,7 @@
 
     <!-- Botón que resetea el programa. Ap -->
       <v-btn
-        v-if="cantidadUsos"
+        v-if="seCalculoUnPromedio"
         round
         outline
         color="green"
@@ -103,7 +103,13 @@ export default {
       for (var a = 0; a < this.Evaluaciones.length; a++) {
         sumPorcentajesActual += parseInt(this.Evaluaciones[a].porcentaje);
       }
-      return sumPorcentajesActual;
+      if (isNaN(sumPorcentajesActual)){
+        return 0;
+      }
+      else{
+        return sumPorcentajesActual;
+      }
+      
     }
   },
 
@@ -147,7 +153,7 @@ export default {
         sumTotal += (Number(this.Evaluaciones[i].promedioNotas) * Number(this.Evaluaciones[i].porcentaje)) /100;
         sumPorcentajes += Number(this.Evaluaciones[i].porcentaje);
       }
-      this.promedioFinal = sumTotal;
+      this.promedioFinal = Math.round(sumTotal*100)/100;
       this.porcentajeTotal = sumPorcentajes;
     }
   }
