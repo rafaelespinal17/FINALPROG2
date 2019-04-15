@@ -10,3 +10,4 @@ Final Programación 2
 8. Ir a la carpeta donde se encuentra (ej. cd Documentos/miProyecto/)
 9. Iniciar proyecto vue en modo de desarrollo con el comando **npm run serve**
 10. Copiar y pegar la dirección que aparece en la terminal en el navegador y deberia mostrarse la aplicación.
+11. Abrir la carpeta donde esta su proyecto con su editor de codigo preferido para empezar a editarlo/revisarlo. Ej. VSCODE: https://code.visualstudio.com/ ,Atom: https://atom.io/
