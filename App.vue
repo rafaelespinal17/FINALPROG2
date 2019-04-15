@@ -103,13 +103,7 @@ export default {
       for (var a = 0; a < this.Evaluaciones.length; a++) {
         sumPorcentajesActual += parseInt(this.Evaluaciones[a].porcentaje);
       }
-      if (isNaN(sumPorcentajesActual)){
-        return 0;
-      }
-      else{
-        return sumPorcentajesActual;
-      }
-      
+      return sumPorcentajesActual;      
     }
   },
 
